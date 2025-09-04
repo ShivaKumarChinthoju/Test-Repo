@@ -3,7 +3,7 @@ services:
   my-vite-app:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile.dev
     ports:
       - '4173:5173'
     environment:
@@ -11,6 +11,6 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-    container_name: mt-vite-app-container
+    container_name: my-vite-app-dev
     stdin_open: true
     tty: true
